@@ -6,7 +6,7 @@
  * TCCIP csv file
 
 ## 2019/10/08 開關檔、讀取、分割資料
-ˋˋˋpy
+'''py
 fo=open('C:\\Users\\薰云\\Dropbox\\氣候python\\466920.txt','r')
 print("1:",fo.name)
 print("2:",fo.mode)
@@ -22,6 +22,6 @@ fo.close()
 print("7:",fo.name)
 print("8:",fo.mode)
 print("9:",fo.closed)
-ˋˋˋ
+'''
 
 
