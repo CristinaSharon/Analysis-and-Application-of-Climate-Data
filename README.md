@@ -5,7 +5,7 @@
  * Dbar txt file
  * TCCIP csv file
 
-## 2019/10/08 開關檔、讀取、分割資料
+## 2019/10/08 open()、readline()、split()、close()
 ```py
 fo=open('C:\\Users\\薰云\\Dropbox\\氣候python\\466920.txt','r')
 print("1:",fo.name)
