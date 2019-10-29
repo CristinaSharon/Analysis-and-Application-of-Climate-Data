@@ -53,6 +53,44 @@ plt.plot(x,y2,'b:s')
 ```
 
 
+## 2019/10/22 matrix, no value
+```py
+import numpy as np   
+import matplotlib.pyplot as plt
+#匯入函數庫
+#################### 1. 為了畫圖我要矩陣 ############
+x=np.arange(50000)
+T=np.zeros(50000)
+#################### 1. 完成50000的矩陣 #############
 
+fo=open('C:\\Users\\薰云\\Dropbox\\氣候python\\466922.txt','r')
+
+n=0 #角標 n
+#開始迴圈，碰到break才停止，小心變成無限迴圈
+while True:
+    A=fo.readline()
+    if A: #假設A有值的狀況下
+        As=A.split(',')
+        
+        if(As[5]!="TX01"):     #如果切到的東西不是TX01
+            T[n]=float(As[5])  #字串轉為浮點數，放到T矩陣
+        
+            if(T[n]==-9999):   #假如值是-9999
+                T[n]=None      #把他替換成無效值
+                pass           #完成一次
+            n=n+1              #邁向下一行
+            pass
+        pass
+    else:               #假如沒有讀到東西 斷
+        break
+
+print(n)               #我想看看我做了幾次
+plt.plot(x[0:n],T[0:n],'r')  #畫紅圖
+
+fo.close()
+```
+
+
+## 2019/10/29 year average
 
 
